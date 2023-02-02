@@ -8,7 +8,7 @@ body.style.background = `linear-gradient(to right, ${startColor}, ${endColor})`;
 
 setInterval(() => {
   startColor = endColor;
-  endColor = getRandomColor();
+  endColor = white;
   body.style.background = `linear-gradient(to right, ${startColor}, ${endColor})`;
 }, 5000);
 
