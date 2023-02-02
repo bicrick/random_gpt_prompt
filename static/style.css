@@ -18,7 +18,7 @@ body {
   button {
     padding: 10px 20px;
     font-family: sans-serif;
-    background-color: lightblue;
+    background-color: wheat;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -56,7 +56,7 @@ body {
 
   #copyBtn {
     padding: 10px 20px;
-    background-color: lightblue;
+    background-color: wheat;
     border: none;
     border-radius: 5px;
     cursor: pointer;

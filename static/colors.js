@@ -21,9 +21,19 @@ function getRandomColor() {
     return color;
   }
 
+function getNegativeColor(color) {
+    const r = (255 - parseInt(color.substring(1, 3), 16)).toString(16).padStart(2, '0');
+    const g = (255 - parseInt(color.substring(3, 5), 16)).toString(16).padStart(2, '0');
+    const b = (255 - parseInt(color.substring(5, 7), 16)).toString(16).padStart(2, '0');
+    return `#${r}${g}${b}`;
+}
+
 // transition the color change over a period of time
 setInterval(function() {
     const color = getRandomColor();
     body.style.backgroundColor = color;
-  }, 2000);
+    setTimeout(() => {
+        body.style.backgroundColor = getNegativeColor(color);
+      }, 1000);
+    }, 2000);
 });
