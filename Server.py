@@ -2,6 +2,7 @@ import pandas as pd
 import random
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import os
 
 df = pd.read_csv("prompts.csv")
 a_list = df['act'].values.tolist()
@@ -10,6 +11,8 @@ purpose = random.choice(a_list)
 prompt = random.choice(b_list)
 print(purpose + ": " + prompt)
 
+
+port = int(os.environ.get("PORT",5000))
 app = Flask(__name__)
 CORS(app)
 
@@ -30,5 +33,5 @@ def home():
     
 
 if __name__ == '__main__':
-    app.run() 
+    app.run(host='0.0.0.0', port=port) 
 
