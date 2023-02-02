@@ -2,68 +2,81 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
+  padding: 100px;
   transition: background-color 2s linear;
-  }
-  
-  button, #prompt-label, #purpose, #prompt, #copyBtn {
+}
+
+button {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+button {
+  padding: 10px 20px;
   font-family: sans-serif;
-  font-size: 16px;
+  background-color:  lightgray;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 20px;
-  width: 90%;
-  max-width: 500px;
-  }
-  
-  button {
-  padding: 10px 20px;
-  background-color: lightgray;
-  border: none;
-  }
-  
-  #prompt-label, #purpose {
+  font-size: 16px;
+}
+
+#prompt-label{
+  border-radius: 5px;
+  width:500px;
   text-align: center;
   font-size: 20px;
-  background-color: lightgray;
+  font-family: sans-serif;
+  margin-bottom: -10px;
+}
+
+#purpose{
+  border-radius: 5px;
+  width:500px;
+  font-size: 20px;
+  font-family: sans-serif;
   padding: 10px;
-  }
-  
-  #prompt {
+  background-color: lightgray;
+  border-radius: 5px;
+  margin-bottom: -45px;
+  text-align: center;
+  margin-top: -18px;
+}
+#prompt {
   padding: 10px;
   background-color: lightgray;
-  }
-  
-  #copyBtn {
+  border-radius: 5px;
+  width:500px;
+  font-family: sans-serif
+}
+
+#copyBtn {
   padding: 10px 20px;
-  background-color: lightgray;
+  background-color:  lightgray;
   border: none;
-  }
-  
-  #copyBtn.success {
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#copyBtn.success {
   background-color: green;
   color: white;
-  }
-  
-  #copyBtn.success::after {
+}
+
+#copyBtn.success::after {
   content: "✔️";
   margin-left: 10px;
-  }
-  
-  #title {
+}
+
+#title{
   text-align: center;
   font-size: 30px;
   font-weight: bold;
   font-family: sans-serif;
   margin-bottom: 25px;
-  }
-  
-  @media (max-width: 767px) {
-  button, #prompt-label, #purpose, #prompt, #copyBtn {
-  width: 100%;
-  font-size: 14px;
-  }
-  #title {
-    font-size: 24px;
-}
 }
