@@ -1,26 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let currentColor = "";
+    const body = document.querySelector("body");
 
-// Define an array of possible colors
-const colors = ["#f5f5f5", "#f5f5dc", "#f5f5b1", "#f5f58f", "#f5f569"];
+// define an array of colors
+const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
-// Function to change the background color
-function changeColor() {
-  // Get a random color from the array
-  let newColor = colors[Math.floor(Math.random() * colors.length)];
-  
-  // Check if the new color is the same as the current color
-  while (newColor === currentColor) {
-    newColor = colors[Math.floor(Math.random() * colors.length)];
+let index = 0;
+
+// create a function to update the background color
+const updateColor = () => {
+  body.style.background = colors[index];
+  index = (index + 1) % colors.length;
+};
+
+function getRandomColor() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
   }
-  
-  // Update the current color
-  currentColor = newColor;
-  
-  // Change the background color of the page
-  document.body.style.backgroundColor = newColor;
-}
 
-// Call the changeColor function every 5 seconds
-setInterval(changeColor, 5000);
-  });
+// transition the color change over a period of time
+setInterval(function() {
+    const color = getRandomColor();
+    body.style.backgroundColor = color;
+  }, 2000);
+});
