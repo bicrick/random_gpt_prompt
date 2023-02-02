@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+
     var button = document.getElementById("myBtn");
   
     button.addEventListener("click", function() {
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
           document.getElementById("copyBtn").style.display = "inline-block";
 
           document.getElementById("copyBtn").classList.remove("success");
+          document.getElementById("main").style.display = "block";
           //console.log("Test")
         });
     });
