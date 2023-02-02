@@ -80,12 +80,3 @@ button {
   font-family: sans-serif;
   margin-bottom: 25px;
 }
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  background-color: lightgray;
-  font-family: sans-serif;
-}
