@@ -24,5 +24,10 @@ def sendJSON():
     response = RandomPrompt()
     return jsonify({"message": response})
 
+@app.route('/status')
+def index():
+    return "Status OK"
+
 if __name__ == '__main__':
     app.run() 
+
