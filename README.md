@@ -9,5 +9,9 @@ activate your virtual environemnt pyhton -m venv venv
 
 pip install pandas, Flask
 
-Run through all of Server.ipynb
+Run Server.py
+
+Launch index.html with live server plugin
+
+
 
