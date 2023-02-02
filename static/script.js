@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
     button.addEventListener("click", function() {
       // Make an API call to your backend
-      fetch("http://localhost:5000/")
+
+      fetch(`https://${process.env.HOSTNAME}/`)
         .then(response => response.json())
         .then(data => {
           // Update the text fields with the purpose and prompt
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
           document.getElementById("copyBtn").style.display = "inline-block";
 
           document.getElementById("copyBtn").classList.remove("success");
+          document.getElementById("main").style.display = "block";
           document.getElementById("main").style.display = "block";
           //console.log("Test")
         });
