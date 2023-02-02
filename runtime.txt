@@ -1,1 +1,1 @@
-python --version
+./Server.py
