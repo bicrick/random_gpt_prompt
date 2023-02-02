@@ -8,3 +8,6 @@ activate your virtual environemnt pyhton -m venv venv
 ./venv/scrips/activate
 
 pip install pandas, Flask
+
+Run through all of Server.ipynb
+
