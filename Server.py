@@ -1,6 +1,6 @@
 import pandas as pd
 import random
-from flask import Flask, request, jsonify, send_static_file
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 df = pd.read_csv("prompts.csv")
