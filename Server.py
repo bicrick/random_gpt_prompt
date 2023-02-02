@@ -1,6 +1,6 @@
 import pandas as pd
 import random
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_static_file
 from flask_cors import CORS
 
 df = pd.read_csv("prompts.csv")
@@ -24,9 +24,10 @@ def sendJSON():
     response = RandomPrompt()
     return jsonify({"message": response})
 
-@app.route('/status')
-def index():
-    return "Status OK"
+@app.route('/home')
+def home():
+    return "This is a test"
+    
 
 if __name__ == '__main__':
     app.run() 
