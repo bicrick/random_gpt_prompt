@@ -1,0 +1,6 @@
+#Virtual Env
+venv/
+
+#System Files
+.ipynb_checkpoints
+
