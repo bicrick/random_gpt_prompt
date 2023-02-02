@@ -3,7 +3,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 100px;
-    transition: background-color 5s linear;
   }
   
   button {
