@@ -4,6 +4,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
+    <script src="colors.js"></script>
   </head>
   <body>
     <br>
@@ -20,5 +21,20 @@
       <button id="myBtn">Generate Random Prompt</button>
       <button id="copyBtn" style="display: none;">Copy Text</button>
     </div>
+    <script>
+      // Define an array of color values
+      const colors = ["#E91E63", "#9C27B0", "#3F51B5", "#2196F3", "#00BCD4"];
+      // Get the body element
+      const body = document.querySelector("body");
+      // Get the current index of color
+      let currentColorIndex = 0;
+      // Set an interval to change the color
+      setInterval(() => {
+        // Update the background color of the body
+        body.style.backgroundColor = colors[currentColorIndex];
+        // Increment the index of color
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+      }, 1000);
+    </script>
   </body>
 </html>
