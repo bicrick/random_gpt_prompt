@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     button.addEventListener("click", function() {
       // Make an API call to your backend
 
-      fetch(`https://random-gpt-prompts.herokuapp.com/`)
+      fetch(`https://random-gpt-prompts.herokuapp.com/api`)
         .then(response => response.json())
         .then(data => {
           // Update the text fields with the purpose and prompt

@@ -22,12 +22,12 @@ def RandomPrompt():
 
     return [purpose,prompt]
 
-@app.route("/")
+@app.route("/api")
 def sendJSON():
     response = RandomPrompt()
     return jsonify({"message": response})
 
-@app.route('/home')
+@app.route('/')
 def home():
     return send_from_directory(app.static_folder, 'index.html')
     
