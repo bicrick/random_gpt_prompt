@@ -37,3 +37,10 @@ def home():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=port) 
 
+#Izzy is so funny. 
+#She likes to eat pizza.
+#She is a good friend.
+#Sometimes she is a little bit mean.
+#In the mornings, she likes to eat cereal.
+#She is a good student.
+#But, she is not a good dancer.
